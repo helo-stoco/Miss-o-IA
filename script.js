@@ -82,16 +82,16 @@ function mostraPergunta() {
         return;
     }
     perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
+    const caixaPerguntas.textContent = perguntaAtual.enunciado;
+    const caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativas);
+        const botaoAlternativas.textContent = alternativa.texto;
+        const botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        const caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 function respostaSelecionada(opcaoSelecionada){
@@ -102,9 +102,9 @@ function respostaSelecionada(opcaoSelecionada){
 }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+    const caixaPerguntas.textContent = "Em 2049...";
+    const textoResultado.textContent = historiaFinal;
+    const caixaAlternativas.textContent = "";
 
 }
 mostraPergunta();
